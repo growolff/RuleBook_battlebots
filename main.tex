@@ -1,0 +1,336 @@
+\documentclass[11pt]{article}
+
+\title{BRC BattleBots Bases}
+\author{l}
+\date{April 2022}
+
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+
+\usepackage{mathpazo}
+
+\usepackage{graphicx} 
+\usepackage{hyperref}
+\usepackage[spanish]{babel}
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{decorations.pathreplacing}
+
+\newcommand{\seclabel}[1]{\label{sec:#1}}
+\newcommand{\figlabel}[1]{\label{fig:#1}}
+\newcommand{\tablabel}[1]{\label{tab:#1}}
+\newcommand{\chaplabel}[1]{\label{chap:#1}}
+\newcommand{\figref}[1]{Figure~\ref{fig:#1}}
+\newcommand{\secref}[1]{Section~\ref{sec:#1}}
+\newcommand{\chapref}[1]{Chapter~\ref{chap:#1}}
+\newcommand{\tabref}[1]{Table~\ref{fig:#1}}
+
+\begin{document}
+
+\newcommand{\subtitle}{Reglas: Liga BattleBots}
+\input{titlepage.tex}
+
+
+\section*{Acerca de}
+Este es el libro oficial de reglas de la competencia de robótica Beauchef Robotic Challenge (BRC) para la liga BattleBots.
+
+Basado en el programa de televisión \emph{BattleBots} transmitido por Discovery Channel en Estados Unidos.
+
+Cualquier consulta, enviar un mail a: \href{mailto:beauchefrc@gmail.com}{beauchefrc@gmail.com}
+
+\section*{Agradecimientos}
+
+Queremos agradecer a los miembros de la Comunidad de Robótica, Fablab, IEEE UChile y Beauchef Proyecta por adaptar las reglas y organizar la BRC.
+
+También queremos agradecer a las siguientes instituciones por su colaboración en la realización de BRC:
+
+\begin{itemize}
+   \item \textbf{Facultad de Ciencias Físicas y Matemáticas (FCFM)} de la Universidad de Chile por el apoyo entregado para la realización de esta competencia. 
+ \end{itemize} 
+
+
+\section*{Changelog}
+\begin{itemize}
+  \item \textbf{Agosto 2022}
+    \begin{itemize}
+        \item Actualización de libro para la competencia BRC 2022
+    \end{itemize}
+
+  \item \textbf{Julio 2019}
+    \begin{itemize}
+        \item Primera versión del libro del reglas para competencia de BattleBots a nivel universitario.
+    \end{itemize}
+    
+  \item \textbf{Octubre 2019}
+    \begin{itemize}
+        \item Adaptación para primera versión en la BRC'19.
+    \end{itemize}
+    
+  \item \textbf{Abril 2022}
+    \begin{itemize}
+        \item Recopilación de reglas de BRC'19 para la creación de este libro de reglas.
+    \end{itemize}
+\end{itemize}
+
+\pagebreak
+
+\section{Objetivo de la Competencia}
+
+El objetivo de la competencia es enfrentar a 2 robots de batalla en una arena de pelea. Cada battlebot buscará causar el mayor daño mecánico a su oponente, intentando deshabilitar sus mecanismos de ataque y/o movilización, mientras defiende o mantiene íntegros sus propios mecanismos de ataque y movilización.
+
+\section{Categorías}
+Esta competencia contará con 2 categorías:
+\begin{itemize}
+    \item Módulo Interdisciplinario: Disponible solo para alumnas/os de la FCFM, que vayan a inscribir el curso CD2201 en la sección correspondiente.
+    \item Open: Abierto a todo público, incluyendo a equipos que participen en la categoría Módulo Interdisciplinario.
+\end{itemize}
+
+\section{Equipos y participantes}
+
+\begin{enumerate}
+    \item El equipo debe estar formado por 3 o 4 integrantes.
+    \item Cada equipo deberá nombrar a un/a capitán/a.
+    \item Ningún integrante de un equipo podrá formar parte de otro equipo.
+\end{enumerate}
+
+\section{Reglas de la Competencia}
+
+\subsection{Sobre el BattleBot}\label{subs:bt}
+\begin{enumerate}
+    \item Las dimensiones máximas del robot deben ser de 30x30x30 cm. El peso del robot quedará limitado a 4.5 kg todas sus piezas y baterías incluidas, exceptuando el control remoto y/u otros artículos que no estén conectados físicamente al robot.
+    \item El robot debe ser controlado de forma inalámbrica en un rango de 3 MHz a 3 GHz.
+    \item El robot no puede separarse en diferentes piezas.
+    \item La batería del robot debe ser fácil de retirar en caso de emergencias. %detallar
+    \item El robot solo puede causar daño mecánico a sus oponentes.
+    \item El robot puede contar durante la competencia con: 
+    \begin{enumerate}
+        \item Sistemas de máximo 24 volts CC.
+        \item Sensores infrarrojos, ultrasónicos o similares para detectar al oponente.
+        \item Elementos que se desplieguen y cuenten con un sistema de retracción.
+        \item Muelles o resortes, siempre y cuando su accionar sea de manera remota bajo la energía del robot.
+        \item Baterías que no derramen su contenido al momento de ser volteadas o dañadas. Se permite el uso de batería con celdas de gel, baterías níquel-cadmio, níquel-hidruro metálico, de celda seca, AGM selladas, de litio, de litio-polímero.
+        \item Elementos de movilidad como rodantes, caminantes, aero-deslizamiento y/o arrastre.
+        \item Deberá trabajar con frecuencia modificable y solamente 1 en el momento de la competencia para evitar interferencias.
+    \end{enumerate}
+    
+    \item 
+    \label{it:no_permitido} El robot no puede portar durante la competencia:
+    \begin{enumerate}
+        \item Ácidos, aceites, agua o cualquier otra sustancia como arma que ponga en peligro a las personas o al escenario.
+        \item Pirotecnia.
+        \item Equipo que provoque interferencia de RC.
+        \item Elementos con filo como cuchillas o sierras de madera.
+        \item Dispositivos que generen pulsos electromagnéticos (PEM).
+        \item Armas eléctricas, es decir, armas que puedan dañar eléctricamente al otro robot, como \textit{tasers} y similares.
+        \item Campos electromagnéticos que afecten a la electrónica del oponente. 
+        \item Armas o defensas que puedan trabar el movimiento del oponente tales como redes, cintas, cuerdas, etc.
+        \item Luces que impidan la visibilidad del participante, réferi o espectador.
+        \item Cualquier elemento de vuelo o elevación.
+    \end{enumerate}
+    \item Cualquier objeto no especificado anteriormente debe ser consultado al equipo organizador enviando un mail a \href{mailto:beauchefrc@gmail.com}{beauchefrc@gmail.com}.
+    
+\end{enumerate}
+
+\subsection{Área de competencia}
+\begin{enumerate}
+    \item Se entiende por área de combate el espacio formado por la tarima de juego o ring y un espacio denominado área exterior de seguridad que se encontrará alrededor de la tarima. La tarima o ring será de forma hexagonal y su superficie de madera MDF poseerá unas dimensiones de 1.8 metros de diámetro.
+    \item En el centro se encontrarán dos líneas “de salida” de 2 cm. de ancho y 10 cm. de largo paralelas y separadas 10 cm. entre sí aproximadamente con el fin de marcar la posición y distancia iniciales a las que deben estar los robots entre sí en el inicio del combate.
+    \item El área de combate contará con dispositivos diseñados para causar daño incorporados. Estos funcionarán en un bucle (no serán controlados) y solo serán armas que causen daño mecánico.
+    \item El área de combate contará con las medidas de seguridad adecuadas para evitar daños y perjuicios a personas y objetos fuera de este.
+\end{enumerate}
+
+\section{Competencia}
+
+La competencia se realizará únicamente entre robots de la misma categoría usando el mismo protocolo. Este consiste en una etapa de grupos y posteriormente en una etapa de eliminación directa. \\
+
+\subsection{Etapa de Grupos}
+\begin{enumerate}
+    \item Previo a la competencia se agrupará a los robots de 3 o 2 robots mediante un sorteo. Se priorizará la mayor cantidad de grupos de 3.
+    \item En esta etapa, se realizarán peleas de dos robots y se enfrentarán todos los robots del mismo grupo, es decir, si hay robots ``A'', ``B'' y ``C'', el robot ``A'' peleará dos veces -con ``B'' y ``C''-.
+    \item Las peleas serán punteadas y clasificará de manera directa a la siguiente etapa el mejor robot de cada grupo. Respecto a la calificación, veáse \ref{subs:cal}.
+\end{enumerate}
+
+\subsection{Etapa de Eliminación Directa}
+\begin{enumerate}
+    \item  En esta etapa se realizarán peleas entre dos robots de acuerdo a un sorteo realizado previo a la competencia (y acorde a la cantidad de equipos participantes).
+    \item Los robots que clasifican a esta etapa corresponden a:
+    \begin{itemize}
+        \item El mejor robot de cada grupo.
+        \item Los segundos lugares ordenados por puntaje hasta completar una cantidad de robots par. Respecto a la calificación, veáse \ref{subs:cal}.
+    \end{itemize}
+    \item En esta etapa se definirán los robots que competirán en la Final y en la Semifinal.
+\end{enumerate}
+
+\subsection{Previo a la competencia}
+\begin{enumerate}
+    \item Una vez se confirme la inscripción de los equipos, se generarán al azar los grupos de competencia.
+    \item El día de la competencia, antes de iniciar, se verificará que los robots cumplan con las indicaciones de la Sección \ref{subs:bt}.
+    
+\end{enumerate}
+\subsection{Protocolo de pelea}
+\begin{enumerate}
+    \item Cada pelea consiste en un único asalto contra otro equipo cuya duración es de 1 minuto. %%%1:30 mejor o no?
+    \item Dada la indicación del juez para el inicio de la pelea, el robot al ser puesto en la línea de partida. Tendrá la opción de probar funcionamiento (dirección y armas) cuando el juez de dicha orden.
+    \item Los responsables de cada equipo se prepararán para activarlos en cuanto el juez de pista lo indique. 
+    % \item Mientras el robot está en pelea, lxs competidorxs deben mantenerse detrás de la línea de seguridad de la tarima. APAÑO A ESTO
+    \item Mientras el robot está en pelea, no podrá ser reparado y/o modificado. Cuando esta termine, podrá modificarse y/o repararse siempre y cuando cumpla las especificaciones de esta convocatoria.
+    \item Los jueces de pista (réferi), podrán parar la contienda cuando lo consideren necesario.
+    \item Cuando los jueces de pista den por finalizado el tiempo de combate, los representantes de equipo procederán a retirar los robots del área de batalla.
+    \item Los participantes no podrán acceder a la arena de combate a ingresar o retirar su robot a menos que el réferi lo indique. Faltar a este protocolo es constitutivo de descalificación.
+\end{enumerate}
+
+\subsection{Normativa de pelea}
+
+El encuentro debe ser detenido y empezar uno nuevo por las siguientes situaciones:
+
+\begin{enumerate}
+    \item Ambos robots se mueven, sin lograr hacer contacto por 15 segundos, o se detienen y permanecen detenidos sin control alguno por 15 segundos sin tocarse el uno al otro.
+    \item Petición de parada de un combate: El representante de uno de los equipos contrincantes puede pedir la detención de la pelea cuando su robot haya tenido un accidente que le impida continuar. Será responsabilidad del réferi de pista aceptar la petición y decidir si la parada puede ser motivo de punto para alguno de los equipos implicados.
+\end{enumerate}
+
+\section{Criterios de calificación}\label{subs:cal}
+En cada asalto se otorgarán puntaje de acuerdo a tres criterios:
+\begin{enumerate}
+    \item Situación de impacto (1 punto): Un robot se dirige deliberadamente hacia el otro con la intención de dañarlo, y se produce contacto entre ambos robots.
+    \item Daño efectivo (2 puntos): Si en una situación de impacto el robot efectivamente daña al otro, es decir, causa alguna alteración permanente y claramente visible (deformación, corte, desprendimiento, etc). También se considerará daño efectivo si se inhabilita el funcionamiento de alguna de las partes de los mecanismos de ataque y/o desplazamiento.
+    \item Knockout (10 puntos): El robot queda inhabilitado para atacar o desplazarse. Si un robot queda en knockout se acaba el asalto.
+\end{enumerate}
+
+\section{Infracciones}
+Será considerada una infracción por parte de un equipo cualquiera de las siguientes acciones:
+\begin{enumerate}
+    \item Una parada del combate que no se considere justificada (-0.5 puntos).
+    \item Activación del robot antes de que el réferi lo indique (-0.5 puntos).
+    \item No respetar los tiempos establecidos (-0.5 puntos).
+    \item Cualquier acción que remita contra la integridad de la organización, así como a la de sus participantes y jueces (-100 puntos).
+\end{enumerate}
+
+\section{Penalización}
+Será considerado como penalización y, por lo tanto, supondrán la eliminación de la competencia por parte del equipo causante de la penalización, lo siguiente: %suena raro lo anterior, redacción --- Mejor?
+\begin{enumerate}
+    \item La separación en diferentes partes funcionales del robot antes o durante la pelea.
+    \item La utilización de alguno de los elementos no permitidos explicitados en el ítem \ref{it:no_permitido} de la Sección \ref{subs:bt}. 
+    \item Insultar o agredir a miembros de la organización, así como al resto de los participantes.
+\end{enumerate}
+
+El réferi y el comité organizador se reservan el derecho de expulsión de la competencia de un equipo si así se cree oportuno, comunicando los motivos de la expulsión a las partes afectadas y su decisión será irrevocable.
+
+\section{Accidentes durante la competencia} 
+Todos los participantes construirán y operarán sus robots bajo su propio riesgo. La categoría de pelea es explícitamente peligrosa. Todos los participantes deberán de tomar en cuenta que no existe ningún reglamento internacional que englobe y clasifique todos los riesgos que implica la categoría. Deberán tener cuidado en no lastimarse a ustedes o a otros al momento de la construcción, prueba y pelea de los robots.\\
+
+Durante la competencia el equipo organizador dispondrá de los equipos de seguridad adecuados (guantes y lentes) en caso que sea necesario intervenir en la arena de combate mientras los robots siguen activos. El ingreso de cualquier persona a la arena de combate debe ser autorizado por el réferi. \\
+
+\vspace{15mm}
+Cualquier otra especificación y/o norma respecto a la competencia no abarcada en estas reglas, queda a criterio del equipo organizador. \\
+
+El equipo organizador se reserva el derecho a modificar las bases y reglas de la competencia. En tal caso, se informará oportunamente a los equipos inscritos.
+
+
+% \begin{center}
+%     \begin{tikzpicture}
+%     \node[draw, circle] (E) at (0,0) {};
+%     \node[draw, circle] (F) at (1,0.5) {};
+%     \node[draw, circle] (D) at (0,1) {};
+    
+%     \node[draw, circle] (B) at (0,2) {};
+%     \node[draw, circle] (C) at (1,2.5) {};
+%     \node[draw, circle] (A) at (0,3) {};
+%     %
+%     \node[draw, circle] (1B) at (3,2.5) {};
+%     \node[draw, circle] (1A) at (3,0.5) {};
+    
+%     \node[draw, circle] (W) at (5,1.5) {};
+    
+%     \draw[-] (1.5, 2.5) -- (2.5, 2.5);
+%     \draw[-] (1.5, 0.5) -- (2.5, 0.5);
+%     \draw[-] (1A) -- (W);
+%     \draw[-] (1B) -- (W);
+% \end{tikzpicture}
+% \end{center}
+
+% \begin{center}
+%     \begin{tikzpicture}
+%     \node[draw, circle] (A) at (0,3) {};
+%     \node[draw, circle] (B) at (0,2) {};
+%     \node[draw, circle] (C) at (1,2.5) {};
+    
+%     \node[draw, circle] (E) at (0.5,0) {};
+%     \node[draw, circle] (D) at (0.5,1) {};
+    
+%     \node[draw, circle] (F) at (0.5,-1) {};
+%     \node[draw, circle] (G) at (0.5,-2) {};
+    
+%     \node[draw, circle] (1A) at (3,3) {};
+%     \node[draw, circle] (2A) at (3,2) {};
+%     \node[draw, circle] (1B) at (3,0.5) {};
+%     \node[draw, circle] (1C) at (3,-1.5) {};
+    
+%     \node[draw, circle] (B1) at (5,1.5) {};
+%     \node[draw, circle] (B2) at (5,-0.5) {};
+    
+%     \node[draw, circle] (W) at (7,0.5) {};
+    
+    
+%     \draw[-] (D) -- (1B);
+%     \draw[-] (E) -- (1B);
+%     \draw[-] (F) -- (1C);
+%     \draw[-] (G) -- (1C);
+%     \draw[-] (1.5, 2.5) -- (2.5, 2.5);
+    
+%     \draw[-, dashed] (0, 1.5) -- (3, 1.5);
+
+%     \draw[-] (1A) -- (B1);
+%     \draw[-] (1B) -- (B1);
+    
+%     \draw[-] (2A) -- (B2);
+%     \draw[-] (1C) -- (B2);
+    
+%     \draw[-] (B2) -- (W);
+%     \draw[-] (B1) -- (W);
+    
+%     \end{tikzpicture}
+% \end{center}
+% \begin{center}
+%     \begin{tikzpicture}
+%     \node[draw, circle] (A) at (0,3) {};
+%     \node[draw, circle] (B) at (0,2) {};
+%     \node[draw, circle] (C) at (1,2.5) {};
+    
+%     \node[draw, circle] (E) at (0,0) {};
+%     \node[draw, circle] (D) at (0,1) {};
+%     \node[draw, circle] (H) at (1,0.5) {};
+    
+    
+%     \node[draw, circle] (F) at (0.5,-1) {};
+%     \node[draw, circle] (G) at (0.5,-2) {};
+    
+%     \node[draw, circle] (1A) at (3, 2.5) {};
+%     \node[draw, circle] (2AB) at (3, 1.5) {};
+%     \node[draw, circle] (1B) at (3,0.5) {};
+%     \node[draw, circle] (1C) at (3,-1.5) {};
+    
+%     \node[draw, circle] (B1) at (5,1.5) {};
+%     \node[draw, circle] (B2) at (5,-0.5) {};
+    
+%     \node[draw, circle] (W) at (7,0.5) {};
+    
+    
+%     \draw[-] (F) -- (1C);
+%     \draw[-] (G) -- (1C);
+%     \draw[-] (1.5, 2.5) -- (2.5, 2.5);
+    
+%     \draw[-, dashed] (0, 1.5) -- (2.5, 1.5);
+
+%     \draw[-] (1A) -- (B1);
+%     \draw[-] (1B) -- (B1);
+    
+%     \draw[-] (1C) -- (B2);
+%     \draw[-] (2AB) -- (B2);
+    
+%     \draw[-] (B2) -- (W);
+%     \draw[-] (B1) -- (W);
+    
+%     \end{tikzpicture}
+% \end{center}
+\end{document}

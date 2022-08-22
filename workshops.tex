@@ -1,0 +1,169 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Academic Title Page
+% LaTeX Template
+% Version 2.0 (17/7/17)
+%
+% This template was downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% WikiBooks (LaTeX - Title Creation) with modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+% Instructions for using this template:
+% This title page is capable of being compiled as is. This is not useful for 
+% including it in another document. To do this, you have two options: 
+%
+% 1) Copy/paste everything between \begin{document} and \end{document} 
+% starting at \begin{titlepage} and paste this into another LaTeX file where you 
+% want your title page.
+% OR
+% 2) Remove everything outside the \begin{titlepage} and \end{titlepage}, rename
+% this file and move it to the same directory as the LaTeX file you wish to add it to. 
+% Then add \input{./<new filename>.tex} to your LaTeX file where you want your
+% title page.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%  PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+
+\usepackage{mathpazo} % Palatino font
+
+\usepackage{graphicx} 
+\usepackage[colorlinks,bookmarksopen,bookmarksnumbered]{hyperref}
+\usepackage[spanish]{babel}
+\usepackage{float}
+
+\newcommand{\seclabel}[1]{\label{sec:#1}}
+\newcommand{\figlabel}[1]{\label{fig:#1}}
+\newcommand{\tablabel}[1]{\label{tab:#1}}
+\newcommand{\chaplabel}[1]{\label{chap:#1}}
+\newcommand{\figref}[1]{Figure~\ref{fig:#1}}
+\newcommand{\secref}[1]{Section~\ref{sec:#1}}
+\newcommand{\chapref}[1]{Chapter~\ref{chap:#1}}
+\newcommand{\tabref}[1]{Table~\ref{fig:#1}}
+
+
+\newcommand{\mynote}[2]{ 
+\fbox{\bfseries\sffamily\scriptsize#1}
+ \textcolor{red}{\small\textsf{\emph{#2}}}
+\fbox{\bfseries\sffamily\scriptsize }}
+\newcommand\mc[1]{\mynote{MC}{#1}}
+
+\begin{document}
+\newcommand{\subtitle}{Talleres: Reglas y Recomendaciones}
+\input{titlepage.tex}
+
+
+\section*{Acerca de}
+Este es el libro oficial de reglas y recomendaciones de los talleres realizados previos a la competencia de robótica Beauchef Robotic Challenge (BRC).
+
+Cualquier consulta, enviar un mail a: \href{mailto:beauchefrc@gmail.com}{beauchefrc@gmail.com}
+
+% \section*{Agradecimientos}
+
+% Queremos agradecer a los miembros de la Comunidad de Robótica, Fablab y IEEE UChile por adaptar las reglas y organizar la BRC.
+
+% También queremos agradecer a las siguientes instituciones por su colaboración en la realización de BRC:
+
+% \begin{itemize}
+%    \item \textbf{Facultad de Ingeniería y Ciencias (FCFM)} de la Universidad de Chile por el apoyo entregado para la realización de esta competencia. 
+%    \item  \textbf{Innovación y Robótica Estudiantil} de la Universidad Técnica Federico Santa María (UTFSM) por su invaluable apoyo en la creación de este libro y organización de BRC.
+%  \end{itemize} 
+
+
+\section*{Changelog}
+
+\begin{itemize}
+  \item \textbf{Agosto 2019}
+  \begin{itemize}
+    \item Arreglada fecha del segundo taller.
+  \end{itemize}
+  \item \textbf{Julio 2019}
+  \begin{itemize}
+    \item Descripción de talleres.
+    \item Primera versión de este documento.
+  \end{itemize}
+\end{itemize}
+
+\pagebreak
+
+\section{Introducción}
+
+Junto con BRC, la organización coordina una serie de talleres y hackatones complementarias a la competencia, los cuales tienen por fin enseñar todas las herramientas para desarrollar un robot velocista básico. Estos talleres son \textbf{obligatorios para los equipos que reciben becas}, y se recomienda a todos los participantes asistir de todas formas, tanto miembros de la comunidad universitaria como externos a ella. 
+
+Los talleres son realizados en la FCFM con un fuerte apoyo del FabLab UChile. 
+Las personas que realicen los talleres tienen permitido hacer uso de las dependencias del FabLab para el diseño y construcción de sus robots de acuerdo a la normativa del laboratorio.
+Posterior al evento, las personas \textbf{pertenecientes a la comunidad de la Universidad de Chile} quedan validadas como usuarias del espacio, pudiendo ocupar sus espacios incluso terminada la BRC (y acorde a las reglas del FabLab UChile).
+
+\section{Talleres}
+
+Como preparación para BRC, organizamos 5 talleres y 1 hackatón final.
+Todos los eventos son abiertos a los participantes de la competencia.
+Los talleres con fecha posterior al 14 de Agosto no podrán ser realizados en las dependencias del FabLab, sino que en una sala por definir de la FCFM.
+
+\textbf{No es necesario asistir a los 4 primeros talleres si es que ya los realizaron.}
+
+\paragraph*{Diseño CAD: Miércoles 31 de Julio: 12:00 - 13:30}
+Operaciones básicas para diseñar elementos en 3D utilizando el software Autodesk Fusion360.
+Estás habilidades permitirán a los equipos prototipar el chasis del robot y disponer de los componentes comerciales sobre él, así como tener las piezas para su fabricación digital.
+El uso de un computador personal es opcional.
+
+\paragraph*{Impresión 3D: Miércoles 7 de Agosto: 12:00 - 13:30}
+Nociones básicas de impresión 3D FDM, configuración de impresión en el software MakerBotPrint y uso de impresora 3D Replicator2.
+Este taller permite a los usuarios acceso permanente a las impresoras del FabLab.
+
+\paragraph*{Arduino y Electrónica Básica: Miércoles 14 de Agosto: 12:00 - 13:30}
+Se enseña qué es un Arduino, lenguaje de programación, funciones principales en un programa y ejemplos, utilizando elementos de electrónica básica.
+Es necesario que cada equipo traiga al menos un computador para poder realizar las experiencias prácticas.
+
+\paragraph*{Prototipado Electrónico: Miércoles 21 de Agosto: 12:00 - 13:30}
+Operaciones básicas en el Software Eagle para el diseño de placas electrónicas y uso de la máquina Roland Modela para la fabricación de estas.
+La placa electrónica no solamente se utiliza para sostener las componentes electrónicas firmes en el robot, sino que también suele ser el chasis del mismo, disminuyendo el peso total.
+
+\paragraph*{Arduino y Control de Sistemas: Miércoles 28 de Agosto: 12:00 - 13:30}
+Funciones avanzadas de Arduino, control de motores y control PID.
+En este taller se explicará la parte más importante del robot, que corresponde al control de los motores y los parámetros que rigen su funcionamiento, el PID.
+
+\paragraph*{Hackatón: Sábado 7 de Septiembre: Todo el día}
+En la hackatón final guiamos a los competidores en la construcción de sus robots.
+Miembros de la organización y diversos tutores apoyarán a los equipos todo el día en el FabLab, del cual se dispondrán sus máquinas.
+La idea es que los equipos ya tengan parte del desarrollo avanzado y en esta instancia se resuelvan temas más complejos.
+
+\section{Ganadores de Becas}
+
+Para competidores becados, la participación en los talleres y hackatón final es \textbf{obligatoria}.
+Si un equipo tiene problemas, se recomienda comunicarse lo antes posible con la organización.
+Además, el uso de materiales del FabLab, como plástico para impresiones, es gratuito.
+
+\section{Miembros de FCFM}
+
+Se recomienda a los miembros no becados de la FCFM que se inscriban a los llamados de cada uno de los talleres en su momento. 
+El costo del plástico de impresión 3D corresponde a 50 pesos el gramo.
+
+\section{Miembros de la Universidad de Chile}
+
+Se recomienda a los miembros de la universidad inscribirse en los talleres que deseen participar.
+El costo del plástico de impresión 3D corresponde a 100 pesos el gramo.
+
+\section{Externos a la Universidad de Chile}
+Si quieren participar en los talleres, los miembros ajenos a la comunidad de la Universidad de Chile deben inscribirse \textbf{obligatoriamente}. 
+Como organización no aseguraremos el acceso a participantes que no se hayan inscritos.
+
+El uso del FabLab se restringe exclusivamente al desarrollo del robot luego de realizados los talleres.
+Los participantes deben inscribirse en la competencia BRC y mandar un correo con los nombres de los participantes que utilizarán las dependencias del FabLab y el equipo al que pertenecen.
+Ante posibles dudas, contactar con la organización de BRC.
+
+El costo de plástico de impresión 3D es de 150 pesos el gramo.
+
+\end{document}
